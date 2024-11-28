@@ -52,12 +52,6 @@
 }
 
 
-/*index.html*/
-.body-index{
-    background-color: var(--bg-color);
-}
-
-
 /*login.html*/
 
 .body-login{
@@ -163,4 +157,118 @@
     background: rgb(68, 89, 156);
     color: rgb(5, 13, 64);
     box-shadow: 10px 10px 10px rgb(9, 29, 94);
+}
+
+
+/*index.html*/
+.body-index{
+    background-color: var(--bg-color);
+}
+
+.slideShow{
+    padding: 5%;
+}
+
+#image{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+}
+
+.container-card{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.card{
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    background: var(--mid-color);
+    color: var(--bg-color);
+    width: 25%;
+    padding: 2%;
+    transition: all 0.5s;
+}
+
+.card:hover{
+    background: var(--text-color);
+    color: var(--contrast-color);
+}
+
+.card img{
+    padding: 3%;
+    width: 70%;
+}
+
+.c-final-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7%;
+}
+
+#google-maps{
+    width: 600px;
+    margin-left: 4%;
+    height: 300px;
+}
+
+#google-maps iframe{
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.container-depoimentos{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.depoimento{
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    background: var(--mid-color);
+    width: 60%;
+    color: var(--bg-color);
+    padding: 2%;
+}
+
+.depoimento img{
+    width: 70%;
+    padding: 4%;
+}
+
+
+/*Rodapé*/
+
+.rodape{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(78, 78, 78);
+    padding: 5%;
+}
+
+.rodape a{
+    color: var(--bg-color);
+    transition: all 0.5s;
+}
+
+.rodape a:hover{
+    color: var(--mid-color);
+}
+
+.rodape h2{
+    color: var(--bg-color);
+    margin-bottom: 5%;
+}
+
+.rodape img{
+    width: 30px;
+    margin: 5px 10px -10px 5px;
+    padding: 5px;
 }

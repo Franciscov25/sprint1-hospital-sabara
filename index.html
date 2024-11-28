@@ -18,33 +18,122 @@
         <img src="./src/assets/logoCodeNexusAndHPSabara.png" alt="logo-hospital-sabara">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Acompanhar exames</a></li>
-                <li><a href="#">Relatórios</a></li>
-                <li><a href="#">Chamados</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Agendamento</a></li>
+                <li><a href="#">Acompanhar o andamento</a></li>
+                <li><a href="#">Falar com médico</a></li>
+                <li><a href="#">Ajustes</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="main">
-        <div class="chamados">
-
+        <div class="home">
+            <div class="slideShow">
+                <img id="image" alt="slideShow-das-telas"/>
+            </div>
         </div>
 
-        <div class="exames-andamento">
-
+        <div class="container-card">
+            <div class="card jump-card">
+                <h3>Cardiologia</h3>
+                <img src="./src/assets/logo-hospital.jpg" alt="img-card">
+                <p>Descrição breve do que é</p>
+            </div>
+            <div class="card jump-card">
+                <h3>Neurologia</h3>
+                <img src="./src/assets/logo-hospital.jpg" alt="img-card">
+                <p>Descrição breve do que é</p>
+            </div>
+            <div class="card jump-card">
+                <h3>Oncologia</h3>
+                <img src="./src/assets/logo-hospital.jpg" alt="img-card">
+                <p>Descrição breve do que é</p>
+            </div>
         </div>
 
-        <div class="relatorios">
+        <div class="c-final-section"> <!--container final section-->
+            <div id="google-maps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.517104231681!2d-46.661824060356864!3d-23.54986466125796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5831b56f76c7%3A0xc1c434e6ae0e8fa8!2sSabar%C3%A1%20Hospital%20Infantil!5e0!3m2!1spt-BR!2sbr!4v1732816826388!5m2!1spt-BR!2sbr"
+                    width="500" height="200" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
 
+            <div class="container-depoimentos">
+                <div class="depoimento">
+                    <img src="./src/assets/logo-hospital.jpg" alt="foto-da-pessoa">
+                    <h3>Name</h3>
+                    <p>Description of depoimento bro</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <footer class="rodape">
+        <div class="c-left">
+            <h2 id="title-left">Links Úteis</h2>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./agendamento.html">Agendamento</a></li>
+                <li><a href="./timeline.html">Acompanhar o andamento</a></li> <!--timeline = acompanhamento-->
+                <li><a href="./chat.html">Falar com médico</a></li> <!--falar .... = chat-->
+                <li><a href="./ajustes.html">Ajustes</a></li>
+            </ul>
+        </div>
+        <div class="c-right">
+            <h2 id="title-right">Desenvolvedores do projeto</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/franciscovargas7/"><img src="./src/assets/linkedin.png"></a><a>Francisco Vargas</a></li>
+                <li><a href="https://www.linkedin.com/in/"><img src="./src/assets/linkedin.png"></a><a>Matheus Irizawa</a></li>
+                <li><a href="https://www.linkedin.com/in/kayque-carvalho-49a190283/"><img src="./src/assets/linkedin.png"></a><a>Kayque Carvalho</a></li>
+                <li><a href="https://www.linkedin.com/in/kayque-carvalho-49a190283/"><img src="./src/assets/linkedin.png"></a><a>Marcelo Affonso</a></li>
+            </ul>
+        </div>
+        <div class="c-mid">
+            <h2>Scrum Master</h2>
+            <ul>
+                <li><a>Yan Coelho</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        /* Criando slideShow */
+
+        // declarando as variaveis
+
+        let imagens = [
+            './src/assets/logo-hospital.jpg',
+            './src/assets/logo-hospital.jpg',
+            './src/assets/logo-hospital.jpg',
+            './src/assets/img4.png'
+        ];
+
+        let i = 0;
+        let time = 4000;
+
+        function slideShow(){
+            document.getElementById('image').src = imagens[i];
+            i++;
+            if(i == imagens.length){i=0;}
+                setTimeout('slideShow()',time)
+        }
+        slideShow();
 
 
-
-
-    <!--chamando o script externo-->
-    <script src="./src/js/script.js"></script>
+        /*Criando função para fazer o efeito de jump ao passar o mouse no card*/
+        const cards = document.getElementsByClassName('jump-card');
+        
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("mouseover", function() {
+            this.style.transform = "translateY(-30px)"; // definindo o tamanho do jump
+            });
+            cards[i].addEventListener("mouseout", function() {
+            this.style.transform = "translateY(0)"; // voltando com os elementos pro lugar inicial
+            });
+        }
+    </script>
 </body>
 </html>
