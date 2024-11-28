@@ -1,0 +1,166 @@
+/*reset basico*/
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*declarando variáveis das cores*/
+:root{
+    --bg-color: #E5E3D4;
+    --text-color: #1C325B;
+    --mid-color: #6A669D;
+    --contrast-color: #9ABF80;
+}
+
+
+/* barra de navegação | header */
+.section-principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-right: 2%;
+}
+
+.section-principal nav ul{
+    display: flex;
+    padding: 1.5rem;
+    gap: 3rem;
+}
+
+.section-principal nav ul li a{
+    color: var(--mid-color);
+    font-weight: 400;
+    transition: 0.4s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.section-principal a:hover, .section-principal a.active{
+    color: var(--text-color);
+    border-bottom: 3px solid var(--text-color);
+}
+
+.section-principal img{
+    width: 20%;
+}
+
+
+/*index.html*/
+.body-index{
+    background-color: var(--bg-color);
+}
+
+
+/*login.html*/
+
+.body-login{
+    background: url('https://institutopensi.org.br/wp-content/uploads/2020/09/Fachada_2019_01.jpg') no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /*vh responsivo, ele pega de acordo com o tamanho da tela*/
+    background-size: cover;
+    background-position: center;
+}
+
+.main-login{
+    background: rgb(30, 56, 148);
+    width: 50%;
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    background: transparent;
+}
+
+.main-login header h1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin: 5px 0px 5px 0px;
+}
+
+.form{
+    padding: 0 40px 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.controle{ /*ateção ás propriedades que fazem a mesma coisa*/
+    padding-bottom: 10px;
+    position: relative; /*não deixa outros elementos ficarem por cima dele*/
+}
+
+.form .controle ::placeholder{
+    font-size: 0.8rem
+}
+
+.controle label{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+
+.controle input{
+    border: 2px solid rgb(5, 13, 64);
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.controle.error i.error{
+    visibility: visible;
+    font-size: 10px;
+}
+
+.controle.sucesso i.sucesso{
+    visibility: visible;
+}
+
+.controle.error small{
+    flex-direction: column;
+    color: #fff;
+    font-size: 10px;
+    visibility: visible;
+}
+
+.controle i{
+    position: absolute; /*fica uma img por cima da outra, mas é assim mesmo pois queremos usar somente aquele espaço para as mensagens, ou error ou sucesso*/
+    top: 4px;
+    right: 10px;
+    visibility: hidden; /*ocultando as imgs*/
+}
+
+.controle small{
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #fff;
+}
+
+.form button{
+    width: 65%;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: rgb(5, 13, 64);
+    color: #fff;
+    margin-left: 50px;
+}
+
+.form button:hover{
+    background: rgb(68, 89, 156);
+    color: rgb(5, 13, 64);
+    box-shadow: 10px 10px 10px rgb(9, 29, 94);
+}
