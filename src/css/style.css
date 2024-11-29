@@ -48,7 +48,17 @@
 }
 
 .section-principal img{
-    width: 20%;
+    width: 10%;
+}
+
+#btn-aClaro{
+    background-color: #a2c2f2;
+    border: 1px solid var(--text-color);
+}
+
+.changeColor .color{
+    width: 20px;
+    border-radius: 100%;
 }
 
 
@@ -167,34 +177,59 @@
 
 .slideShow{
     padding: 5%;
+    display: flex;
+    justify-content: center;
 }
 
 #image{
     border: 1px solid black;
     border-radius: 10px;
-    width: 100%;
-    height: 300px;
+    height: 25rem;
+    width: 70%;
 }
 
 .container-card{
     display: flex;
     text-align: center;
     justify-content: space-around;
+    background-color: grey;
+    padding: 2%;
 }
 
 .card{
     border: 1px solid var(--text-color);
     border-radius: 10px;
     background: var(--mid-color);
-    color: var(--bg-color);
-    width: 25%;
+    color: #FFF;
+    width: 180px;
     padding: 2%;
     transition: all 0.5s;
 }
 
+/*colorizando os cards pelos ids*/
+#pouca-u{
+    background: green;
+}
+
+#isolamento{
+    background-color: blue;
+}
+
+#preferencial{
+    background-color: orange;
+}
+
+#urgencia{
+    background-color: rgb(193, 193, 0);
+}
+
+#emergencia{
+    background-color: red;
+}
+
+
 .card:hover{
     background: var(--text-color);
-    color: var(--contrast-color);
 }
 
 .card img{
@@ -210,7 +245,7 @@
 }
 
 #google-maps{
-    width: 600px;
+    width: 60%;
     margin-left: 4%;
     height: 300px;
 }
@@ -238,9 +273,102 @@
 }
 
 .depoimento img{
-    width: 70%;
+    width: 40%;
     padding: 4%;
 }
+
+
+/*problema-solucao.html*/
+#body-ps{
+    background: var(--bg-color);
+}
+
+.container-ps{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.card-ps{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    width: 45%;
+    transition: all 0.5s;
+    background: var(--mid-color);
+    color: var(--bg-color);
+}
+
+.card-ps:hover{
+    background: var(--text-color);
+    color: #fff;
+}
+
+.card-ps img{
+    width: 40%;
+}
+
+.conteudo-card-ps{
+    margin-left: 4%;
+}
+
+
+/*servicos.html*/
+#body-serv{
+    background: var(--bg-color);
+}
+
+
+
+
+/*timeline.html (acompanhar o andamento)*/
+#body-tl{
+    background-color: var(--bg-color);
+}
+
+.container-card-tl{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.card-tl{
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    background: var(--mid-color);
+    color: var(--bg-color);
+    width: 20%;
+    padding: 1%;
+}
+
+.card-tl img{
+    width: 20%;
+}
+
+.card-tl h3{
+    padding-top: 2%;
+}
+
+.card-tl small{
+    color: rgb(255, 248, 150);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Rodapé*/

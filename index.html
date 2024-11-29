@@ -15,14 +15,18 @@
 </head>
 <body class="body-index">
     <header class="section-principal">
-        <img src="./src/assets/logoCodeNexusAndHPSabara.png" alt="logo-hospital-sabara">
+        <img src="./src/assets/hpandcn-removebg-preview.png" alt="logo-hospital-sabara-e-codeNexus">
+        <div class="changeColor">
+            <input type="button" class="color" id="btn-aClaro" onclick="trocar('#a2c2f2')"/>
+        </div>
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Agendamento</a></li>
-                <li><a href="#">Acompanhar o andamento</a></li>
-                <li><a href="#">Falar com médico</a></li>
-                <li><a href="#">Ajustes</a></li>
+                <li><a href="./agendamento.html">Agendamento</a></li>
+                <li><a href="./timeline.html">Acompanhar o andamento</a></li>
+                <li><a href="./chat.html">Falar com médico</a></li>
+                <li><a href="./servicos.html">Nossos Serviços</a></li>
+                <li><a href="./problema-solucao.html">Problema e Solução</a></li>
+                <li><a href="./ajustes.html">Ajustes</a></li>
             </ul>
         </nav>
     </header>
@@ -35,20 +39,25 @@
         </div>
 
         <div class="container-card">
-            <div class="card jump-card">
-                <h3>Cardiologia</h3>
-                <img src="./src/assets/logo-hospital.jpg" alt="img-card">
-                <p>Descrição breve do que é</p>
+            <div class="card jump-card" id="pouca-u">
+                <h3>Pouca Urgência</h3>
+                <p>Na fila: 10</p>
             </div>
-            <div class="card jump-card">
-                <h3>Neurologia</h3>
-                <img src="./src/assets/logo-hospital.jpg" alt="img-card">
-                <p>Descrição breve do que é</p>
+            <div class="card jump-card" id="isolamento">
+                <h3>Isolamento</h3>
+                <p>Na fila: 10</p>
             </div>
-            <div class="card jump-card">
-                <h3>Oncologia</h3>
-                <img src="./src/assets/logo-hospital.jpg" alt="img-card">
-                <p>Descrição breve do que é</p>
+            <div class="card jump-card" id="preferencial">
+                <h3>Preferencial</h3>
+                <p>Na fila: 10</p>
+            </div>
+            <div class="card jump-card" id="urgencia">
+                <h3>Urgência</h3>
+                <p>Na fila: 10</p>
+            </div>
+            <div class="card jump-card" id="emergencia">
+                <h3>Emergência</h3>
+                <p>Na fila: 10</p>
             </div>
         </div>
 
@@ -63,9 +72,11 @@
 
             <div class="container-depoimentos">
                 <div class="depoimento">
-                    <img src="./src/assets/logo-hospital.jpg" alt="foto-da-pessoa">
-                    <h3>Name</h3>
-                    <p>Description of depoimento bro</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIaKY-ZrytdtArnc3j0mcc2sfNdNR31q5rjQ&s" alt="foto-da-pessoa">
+                    <div class="a">
+                        <h3>Joana da Mata</h3>
+                        <p>"Não fui bem atendida, infelizmente estava com minha filha e demorou muito para chamar, acabei indo embora."</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,8 +88,10 @@
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./agendamento.html">Agendamento</a></li>
-                <li><a href="./timeline.html">Acompanhar o andamento</a></li> <!--timeline = acompanhamento-->
-                <li><a href="./chat.html">Falar com médico</a></li> <!--falar .... = chat-->
+                <li><a href="./timeline.html">Acompanhar o andamento</a></li>
+                <li><a href="./chat.html">Falar com médico</a></li>
+                <li><a href="./servicos.html">Nossos Serviços</a></li>
+                <li><a href="./problema-solucao.html">Problema e Solução</a></li>
                 <li><a href="./ajustes.html">Ajustes</a></li>
             </ul>
         </div>
@@ -107,8 +120,7 @@
         let imagens = [
             './src/assets/logo-hospital.jpg',
             './src/assets/logo-hospital.jpg',
-            './src/assets/logo-hospital.jpg',
-            './src/assets/img4.png'
+            './src/assets/logo-hospital.jpg'
         ];
 
         let i = 0;
@@ -128,11 +140,16 @@
         
         for (let i = 0; i < cards.length; i++) {
             cards[i].addEventListener("mouseover", function() {
-            this.style.transform = "translateY(-30px)"; // definindo o tamanho do jump
+            this.style.transform = "translateY(-15px)"; // definindo o tamanho do jump
             });
             cards[i].addEventListener("mouseout", function() {
             this.style.transform = "translateY(0)"; // voltando com os elementos pro lugar inicial
             });
+        }
+
+        // funcao para trocar background color
+        function trocar(color){
+            document.body.style.background = color;
         }
     </script>
 </body>
