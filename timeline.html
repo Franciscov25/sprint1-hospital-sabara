@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Code Nexus</title>
+    <title>Acompanhar a UTI | Code Nexus</title>
     <!--chamando o CSS externo-->
     <link rel="stylesheet" href="./src/css/style.css">
     <!--adicionando ícone ao lado do title-->
@@ -13,18 +13,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body-tl">
     <header class="section-principal">
-        <img src="./src/assets/logoCodeNexusAndHPSabara.png" alt="logo-hospital-sabara">
+        <img src="./src/assets/hpandcn-removebg-preview.png" alt="logo-hospital-sabara">
         <nav>
+            <ul>
+                <li><a href="./agendamento.html">Agendamento</a></li>
+                <li><a href="./chat.html">Falar com médico</a></li>
+                <li><a href="./servicos.html">Nossos Serviços</a></li>
+                <li><a href="./problema-solucao.html">Problema e Solução</a></li>
+                <li><a href="./ajustes.html">Ajustes</a></li>
+                <li><a href="./timeline.html">Acompanhar UTI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-tl">
+        <div class="container-card-tl">
+            <div class="card-tl">
+                <p>Psicologia</p>
+                <h2>Hoje, 14:00 - 15:00</h2>
+                <p>Dra. Fernanda Marques</p>
+                <img src="./src/assets/hpandcn-removebg-preview.png">
+                <!--barra de progresso aqui-->
+            </div>
+
+            <div class="card-tl">
+                <small>Em breve</small>
+                <h3>Raio X</h3>
+                <h2>Hoje, 15:30 - 16:00</h2>
+                <p>Dr. Roberto Fagundes</p>
+                <!--barra de progresso aqui-->
+            </div>
+
+            <div class="card-tl">
+                <small>Em breve</small>
+                <h3>Radiologia</h3>
+                <h2>Hoje, 17:00 - 17:40</h2>
+                <p>Dra. Patrícia Nunes</p>
+                <!--barra de progresso aqui-->
+            </div>
+
+            <div class="card-tl">
+                <small>Em breve</small>
+                <h3>Terapia</h3>
+                <h2>Hoje, 19:00 - 20:00</h2>
+                <p>Dr. Felipe Georges</p>
+                <!--barra de progresso aqui-->
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="rodape">
+        <div class="c-left">
+            <h2 id="title-left">Links Úteis</h2>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./agendamento.html">Agendamento</a></li>
                 <li><a href="./timeline.html">Acompanhar o andamento</a></li>
                 <li><a href="./chat.html">Falar com médico</a></li>
+                <li><a href="./servicos.html">Nossos Serviços</a></li>
+                <li><a href="./problema-solucao.html">Problema e Solução</a></li>
                 <li><a href="./ajustes.html">Ajustes</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div class="c-right">
+            <h2 id="title-right">Desenvolvedores do projeto</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/franciscovargas7/"><img src="./src/assets/linkedin.png"></a><a>Francisco Vargas</a></li>
+                <li><a href="https://www.linkedin.com/in/"><img src="./src/assets/linkedin.png"></a><a>Matheus Irizawa</a></li>
+                <li><a href="https://www.linkedin.com/in/kayque-carvalho-49a190283/"><img src="./src/assets/linkedin.png"></a><a>Kayque Carvalho</a></li>
+                <li><a href="https://www.linkedin.com/in/kayque-carvalho-49a190283/"><img src="./src/assets/linkedin.png"></a><a>Marcelo Affonso</a></li>
+            </ul>
+        </div>
+        <div class="c-mid">
+            <h2>Scrum Master</h2>
+            <ul>
+                <li><a>Yan Coelho</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

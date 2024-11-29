@@ -18,13 +18,73 @@
         <img src="./src/assets/logoCodeNexusAndHPSabara.png" alt="logo-hospital-sabara">
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
                 <li><a href="./agendamento.html">Agendamento</a></li>
                 <li><a href="./timeline.html">Acompanhar o andamento</a></li>
                 <li><a href="./chat.html">Falar com médico</a></li>
+                <li><a href="./servicos.html">Nossos Serviços</a></li>
+                <li><a href="./problema-solucao.html">Problema e Solução</a></li>
                 <li><a href="./ajustes.html">Ajustes</a></li>
             </ul>
         </nav>
     </header>
+
+    <button id="abrirModal">Ver horários disponíveis hoje</button>
+    <div id="modal" style="display: none;">
+        <p>14:15 | 15:00 | 17:30</p>
+    <button id="fecharModal">Fechar</button>
+    </div>
+
+
+    <footer class="rodape">
+        <div class="c-left">
+            <h2 id="title-left">Links Úteis</h2>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./agendamento.html">Agendamento</a></li>
+                <li><a href="./timeline.html">Acompanhar o andamento</a></li>
+                <li><a href="./chat.html">Falar com médico</a></li>
+                <li><a href="./servicos.html">Nossos Serviços</a></li>
+                <li><a href="./problema-solucao.html">Problema e Solução</a></li>
+                <li><a href="./ajustes.html">Ajustes</a></li>
+            </ul>
+        </div>
+        <div class="c-right">
+            <h2 id="title-right">Desenvolvedores do projeto</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/franciscovargas7/"><img src="./src/assets/linkedin.png"></a><a>Francisco Vargas</a></li>
+                <li><a href="https://www.linkedin.com/in/"><img src="./src/assets/linkedin.png"></a><a>Matheus Irizawa</a></li>
+                <li><a href="https://www.linkedin.com/in/kayque-carvalho-49a190283/"><img src="./src/assets/linkedin.png"></a><a>Kayque Carvalho</a></li>
+                <li><a href="https://www.linkedin.com/in/kayque-carvalho-49a190283/"><img src="./src/assets/linkedin.png"></a><a>Marcelo Affonso</a></li>
+            </ul>
+        </div>
+        <div class="c-mid">
+            <h2>Scrum Master</h2>
+            <ul>
+                <li><a>Yan Coelho</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script>
+        const botaoAbrir = document.getElementById('abrirModal');
+        const modal = document.getElementById('modal');
+        const botaoFechar = document.getElementById('fecharModal');
+
+        botaoAbrir.addEventListener('click', () => {
+        modal.style.display = 'block';
+        });
+
+        botaoFechar.addEventListener('click', () => {
+        modal.style.display = 'none';
+        });
+
+        // Fechar o modal ao clicar fora
+        window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+        modal.style.display = 'none';
+        }
+        });
+    </script>
 </body>
 </html>
