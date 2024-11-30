@@ -7,7 +7,7 @@
     <!--chamando o CSS externo-->
     <link rel="stylesheet" href="./src/css/style.css">
     <!--adicionando ícone ao lado do title-->
-    <link rel="shortcut icon" href="./src/assets/logo-hospital.jpg">
+    <link rel="shortcut icon" href="./src/assets/hpandcn-removebg-preview.png">
     <!--importando fonte, google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,11 +22,11 @@
         <nav>
             <ul>
                 <li><a href="./agendamento.html">Agendamento</a></li>
-                <li><a href="./timeline.html">Acompanhar o andamento</a></li>
                 <li><a href="./chat.html">Falar com médico</a></li>
                 <li><a href="./servicos.html">Nossos Serviços</a></li>
                 <li><a href="./problema-solucao.html">Problema e Solução</a></li>
-                <li><a href="./ajustes.html">Ajustes</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+                <li><a href="./timeline.html">Acompanhar UTI</a></li>
             </ul>
         </nav>
     </header>
@@ -70,12 +70,12 @@
                 </iframe>
             </div>
 
-            <div class="container-depoimentos">
-                <div class="depoimento">
+            <div class="container-dp">
+                <div class="card-dp">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIaKY-ZrytdtArnc3j0mcc2sfNdNR31q5rjQ&s" alt="foto-da-pessoa">
-                    <div class="a">
-                        <h3>Joana da Mata</h3>
-                        <p>"Não fui bem atendida, infelizmente estava com minha filha e demorou muito para chamar, acabei indo embora."</p>
+                    <div class="conteudo-card-dp">
+                        <h2>Joana da Mata</h2>
+                        <p>"Fui bem atendida, a estrutura deles é muito boa e o novo sistema é ótimo! Parabéns!"</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 <li><a href="./chat.html">Falar com médico</a></li>
                 <li><a href="./servicos.html">Nossos Serviços</a></li>
                 <li><a href="./problema-solucao.html">Problema e Solução</a></li>
-                <li><a href="./ajustes.html">Ajustes</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
             </ul>
         </div>
         <div class="c-right">
@@ -118,9 +118,9 @@
         // declarando as variaveis
 
         let imagens = [
-            './src/assets/logo-hospital.jpg',
-            './src/assets/logo-hospital.jpg',
-            './src/assets/logo-hospital.jpg'
+            './src/assets/img1.png',
+            './src/assets/img2.png',
+            './src/assets/img3.png'
         ];
 
         let i = 0;

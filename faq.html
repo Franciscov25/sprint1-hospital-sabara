@@ -7,28 +7,50 @@
     <!--chamando o CSS externo-->
     <link rel="stylesheet" href="./src/css/style.css">
     <!--adicionando ícone ao lado do title-->
-    <link rel="shortcut icon" href="./src/assets/logo-hospital.jpg">
+    <link rel="shortcut icon" href="./src/assets/hpandcn-removebg-preview.png">
     <!--importando fonte, google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body-faq">
     <header class="section-principal">
-        <img src="./src/assets/logoCodeNexusAndHPSabara.png" alt="logo-hospital-sabara">
+        <img src="./src/assets/hpandcn-removebg-preview.png" alt="logo-hospital-sabara">
+        <div class="changeColor">
+            <input type="button" class="color" id="btn-aClaro" onclick="trocar('#a2c2f2')"/>
+        </div>
         <nav>
             <ul>
                 <li><a href="./agendamento.html">Agendamento</a></li>
-                <li><a href="./timeline.html">Acompanhar o andamento</a></li>
                 <li><a href="./chat.html">Falar com médico</a></li>
                 <li><a href="./servicos.html">Nossos Serviços</a></li>
                 <li><a href="./problema-solucao.html">Problema e Solução</a></li>
-                <li><a href="./ajustes.html">Ajustes</a></li>
+                <li><a href="./faq.html">Ajustes</a></li>
+                <li><a href="./timeline.html">Acompanhar UTI</a></li>
             </ul>
         </nav>
     </header>
 
-
+    <section class="faq-container">
+        <h2>FAQ | Perguntas Frequentes</h2>
+        <small>Clique e veja a resposta</small>
+        <div class="faq">
+          <h3 class="faq-question">Vou conseguir ver meu filho em cada processo feito na UTI?</h3> <!--question = questão-->
+          <p class="faq-answer">Sim, você terá acesso á agenda em tempo real do seu filho.</p> <!--answer = resposta-->
+        </div>
+        <div class="faq">
+          <h3 class="faq-question">Eu preciso pagar para ter acesso á estes recursos?</h3>
+          <p class="faq-answer">Não, você não precisa pagar absolutamente nada, a finalidade deste recurso é a sua satisfação.</p>
+        </div>
+        <div class="faq">
+            <h3 class="faq-question">Isso se aplica á uma consulta ou exame?</h3>
+            <p class="faq-answer">Não, a utilidade do "Acompanhar UTI" só se aplica para quem possui um filho(a) na UTI.</p>
+          </div>
+          <div class="faq">
+            <h3 class="faq-question">Por onde eu vejo isso? Consigo ver meu filho por câmeras?</h3>
+            <p class="faq-answer">De forma totalmente remota, seja pelo celular ou computador. Não, no momento a solução não permite visitas virtuais por câmeras, é apenas uma forma de acompanhar o que seu filho faz em cada momento em tempo real.</p>
+          </div>
+        </section>
 
     <footer class="rodape">
         <div class="c-left">
@@ -36,11 +58,11 @@
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./agendamento.html">Agendamento</a></li>
-                <li><a href="./timeline.html">Acompanhar o andamento</a></li>
                 <li><a href="./chat.html">Falar com médico</a></li>
                 <li><a href="./servicos.html">Nossos Serviços</a></li>
                 <li><a href="./problema-solucao.html">Problema e Solução</a></li>
-                <li><a href="./ajustes.html">Ajustes</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+                <li><a href="./timeline.html">Acompanhar UTI</a></li>
             </ul>
         </div>
         <div class="c-right">
@@ -59,5 +81,17 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+    const faqs = document.querySelectorAll('.faq');
+
+    faqs.forEach(faq => { faq.addEventListener('click', () => {
+
+    const answer = faq.querySelector('.faq-answer');
+
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+    });
+    </script>
 </body>
 </html>
