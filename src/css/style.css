@@ -182,7 +182,7 @@
 }
 
 #image{
-    border: 1px solid black;
+    border: 3px solid rgb(78, 125, 78);
     border-radius: 10px;
     height: 27rem;
     width: 60%;
@@ -197,7 +197,7 @@
 }
 
 .card{
-    border: 1px solid var(--text-color);
+    border: 3px solid rgb(78, 125, 78);
     border-radius: 10px;
     background: var(--mid-color);
     color: #FFF;
@@ -251,7 +251,7 @@
 }
 
 #google-maps iframe{
-    border: 2px solid var(--text-color);
+    border: 3px solid rgb(78, 125, 78);
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -472,8 +472,121 @@
 
 
 
+/*agendamento.html*/
+#body-agen{
+    background: var(--bg-color);
+}
+
+.container-agenda {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+.form-group button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background: #0056b3;
+}
+.link-agenda {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+.link-agenda:hover {
+    text-decoration: underline;
+}
 
 
+/*agenda.html*/
+#body-agenda{
+    background-color: var(--bg-color);
+}
+
+/*estilizando o forms*/
+
+.container-form{
+    background-color: var(--mid-color);
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    padding: 5%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.container-form h2{
+    color: var(--text-color);
+    padding: 5px;
+}
+
+.formulario input, .formulario button, .formulario label{
+    display: block;
+    padding: 5px;
+    color: var(--text-color);
+}
+
+#btn-submit{
+    background-color: var(--text-color);
+    border-radius: 10px;
+    width: 190px;
+    margin-top: 10px;
+    
+    color: #fff;
+}
+
+
+/*chat.html*/
+#body-chat{
+    background: var(--bg-color);
+}
+
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+ .form-group button,
+ .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 19px;
+    cursor: pointer;
+}
 
 
 
